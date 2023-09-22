@@ -4,7 +4,7 @@ This project will contain open source tools and utilities shared by the Microsof
 
 ### CollectAudioLogs
 
-This is a script for collecting audio logs, which are used when diagnosing audio problems. This tool is primarily use in collaboration with a developer on the Windows Audio team, though the data may be useful for audio driver developers and software venders that are creating [Audio Processing Objects (APOs)](https://learn.microsoft.com/en-us/windows-hardware/drivers/audio/audio-processing-object-architecture)
+This is a script for collecting audio logs, which are used when diagnosing audio problems. This tool is primarily used in collaboration with a developer on the Windows Audio team, though the data may be useful for audio driver developers and software venders that are creating [Audio Processing Objects (APOs)](https://learn.microsoft.com/en-us/windows-hardware/drivers/audio/audio-processing-object-architecture)
 
 The logs collected by this script are mostly identical to the logs collected by feedback hub. To collect the equivalant audio logs using the feedback hub, you would first go into Feedback Hub Settings and enable "save a local copy of diagnostics when giving feedback." You would then file a feedback under "Devices and Drivers"->"Audio and Sound" with the "Recreate my problem" option.
 
