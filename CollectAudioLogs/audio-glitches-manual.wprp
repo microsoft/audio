@@ -17,7 +17,7 @@
     <SystemProvider Id="SystemProvider">
       <Keywords>
         <Keyword Value="CpuConfig" />
-        <!-- Media eXperience Analyzer can't visualize stacks when CompactCSwitch is used -->
+        <!-- Media eXperience Analyzer can't visualize stacks when CompactCSwitch is used, see bug 13699674 -->
         <Keyword Value="CSwitch" />
         <Keyword Value="DiskIO" />
         <Keyword Value="DPC" />
@@ -42,6 +42,7 @@
         <Stack Value="ThreadDelete" />
       </Stacks>
     </SystemProvider>
+    <!-- Bug 13932237 to move all AEWMIGUID events we care about off of WMI -->
     <EventProvider Id="WMI/AEWMIGUID" Name="a6a00efd-21f2-4a99-807e-9b3bf1d90285" Level="5" NonPagedMemory="false" />
     <EventProvider Id="WPP/ApxGuid" Name="96760ac7-c416-43a7-aa7f-1a676942589c" Level="5" NonPagedMemory="false">
       <Keywords>
@@ -672,6 +673,11 @@
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
     </EventProvider>
+    <EventProvider Id="WPP/qcasd_TraceDebug" Name="1281D603-3BBD-4137-9127-D0A2DD43047C" Level="5" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
     <EventProvider Id="WPP/qcauddev8998_TraceDebug" Name="D3D7C968-4842-4C61-994E-2AAD4DBA2C18" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7FFFFFFF" />
@@ -1058,6 +1064,7 @@
             <EventProviderId Value="WPP/portcls.sys" />
             <EventProviderId Value="WPP/qcadcm8998_TraceDebug" />
             <EventProviderId Value="WPP/qcadcm8998_WppDbg" />
+            <EventProviderId Value="WPP/qcasd_TraceDebug" />
             <EventProviderId Value="WPP/qcauddev8998_TraceDebug" />
             <EventProviderId Value="WPP/qcaudminiport8998_CTLGUID_AUDIO_DRIVER_1" />
             <EventProviderId Value="WPP/qcbtfmuart8998_qca_shb_wpp" />
