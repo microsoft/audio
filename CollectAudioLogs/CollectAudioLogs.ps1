@@ -19,7 +19,7 @@ Function Get-YesNoResponse
 
 [Nullable[bool]]$canRepro;
 [Nullable[bool]]$glitch;
-[bool]$ttt = $false;
+[Nullable[bool]]$ttt;
 
 switch ($problem)
 {
@@ -31,6 +31,7 @@ switch ($problem)
     {
         $canRepro = $true;
         $glitch = $true;
+        $ttt = $false;
         break;
     }
 
@@ -74,6 +75,16 @@ if ($canRepro)
     {
         # Ask the user if the problem is an audio glitch
         $glitch = Get-YesNoResponse -prompt "Is the problem that audio sounds bad";
+
+        if ($glitch)
+        {
+            $ttt = $false;
+        }
+    }
+
+    if ($null -eq $ttt)
+    {
+        $ttt = Get-YesNoResponse -prompt "Do you want to grab time-travel traces";
     }
 }
 elseif ($reproLogsOnly)
