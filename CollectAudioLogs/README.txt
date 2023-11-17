@@ -1,8 +1,8 @@
-1. Double click CollectAudioLogs.cmd
-2. If you can reproduce your problem, do so with while tracing by answering 'y' to the first question. Otherwise answer 'n'.
-3. At the time travel traces prompt,
-   3a. if diagnosing an audio glitch or audio quality problem, answer 'n'
-   3b. for everything else, answer 'y'
-4. If you answered 'y'for repro and/or time travel traces, hit enter when you are finished reproducing the problem to stop tracing.
-5. At the system information prompt, answer 'y'
-6. A zip file with the name COMPUTERNAME_<timestamp> containing all the logs will be created in the script directory when finished.
+1. Double click one of the following files:
+    1a. I-can-make-it-happen-glitch.cmd if the problem is bad-sounding audio and you can make it happen.
+    1b. I-can-make-it-happen-other.cmd if the problem is something else and you can make it happen.
+    1c. I-can-make-it-happen-ttt.cmd if you can make it happen and you want to grab time-travel traces.
+    1d. I-cannot-make-it-happen.cmd if you want to grab after-the-fact logs only.
+2. Some of these may ask you some yes-or-no questions.
+3. If you are making it happen, press Enter when you are done, to stop tracing.
+4. When everything is done, COMPUTERNAME_<timestamp>.zip in the script directory will have the logs.
