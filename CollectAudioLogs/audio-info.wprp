@@ -1,0 +1,861 @@
+<?xml version="1.0" standalone="yes"?>
+<WindowsPerformanceRecorder Version="1.0" Author="" Team="" Comments="" Company="Microsoft Corporation" Copyright="Microsoft Corporation" Tag="">
+  <Profiles>
+    <!-- Collector for system tracing -->
+    <SystemCollector Id="SystemCollector" Name="System Collector">
+      <BufferSize Value="256" />
+      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="256" />
+    </SystemCollector>
+    <EventCollector Id="PagedPoolCollector" Name="PagedPoolCollector">
+      <BufferSize Value="256" />
+      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="64" />
+    </EventCollector>
+    <EventCollector Id="NonpagedPoolCollector" Name="NonpagedPoolCollector">
+      <BufferSize Value="256" />
+      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="64" />
+    </EventCollector>
+    <SystemProvider Id="SystemProvider">
+      <Keywords>
+        <Keyword Value="Loader" />
+        <Keyword Value="ProcessThread" />
+      </Keywords>
+    </SystemProvider>
+    <!-- Bug 13932237 to move all AEWMIGUID events we care about off of WMI -->
+    <EventProvider Id="WMI/AEWMIGUID" Name="a6a00efd-21f2-4a99-807e-9b3bf1d90285" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="WPP/ApxGuid" Name="96760ac7-c416-43a7-aa7f-1a676942589c" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/AudioTrace" Name="e27950eb-1768-451f-96ac-cc4e14f6d3d0" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bisrv.dll" Name="d2440861-bf3e-4f20-9fdc-e94e88dbe1f6" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bluetoothapis.dll" Name="c872ff32-5a0c-4736-bdf2-334c9b8d429f" Level="2" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/brokerlib.dll" Name="e8109b99-3a2c-4961-aa83-d1a7a148ada8" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/btagservice.dll" Name="85d815c6-7437-43ba-9b11-23b8aef6be88" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthavctpsvc.dll" Name="7355ca5c-21c2-4834-a8a0-3057011b4533" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthavrcp.dll" Name="77b174b4-c0fb-4f2c-96e1-e9771c435686" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthhfsrv.dll" Name="9ebd1710-e5b9-4213-a8f3-9b015fd615c1" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthprops.cpl" Name="82cad26a-2dc1-4020-a4f2-0897aa48ed5a" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthradiomedia.dll" Name="7fc34c90-0657-4fdf-960b-702abb741e24" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthserv.dll" Name="ca95ac21-e6fd-4a1b-81be-acf16fcfc0fc" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/BthSMTCMediaController.dll" Name="1808648e-b1c3-4693-922b-701a6ef832c7" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthtelemetry.dll" Name="4eacdc10-6c5b-11e0-ae3e-0800200c9a66" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- Capability Access Manager -->
+    <EventProvider Id="WPP/CamTraceGuid" Name="1aff130c-7154-4379-a18a-6d6e22dd5b16" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CTRLGUID_MF_CAPTURE_ENGINE" Name="00000007-0dc9-401d-b9b8-05e4eca4977e" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CTRLGUID_MF_CORE_MFTS" Name="00000005-0dc9-401d-b9b8-05e4eca4977e" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CTRLGUID_MF_CORE_SINKS" Name="00000002-0dc9-401d-b9b8-05e4eca4977e" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CTRLGUID_MF_CORE_SOURCES" Name="00000003-0dc9-401d-b9b8-05e4eca4977e" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CTRLGUID_MF_NETWORK" Name="00000004-0dc9-401d-b9b8-05e4eca4977e" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CTRLGUID_MF_PIPELINE" Name="00000001-0dc9-401d-b9b8-05e4eca4977e" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CTRLGUID_MF_PLATFORM" Name="00000000-0dc9-401d-b9b8-05e4eca4977e" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CTRLGUID_MF_PLAY" Name="00000006-0dc9-401d-b9b8-05e4eca4977e" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/dafbth.dll" Name="8bbe74b4-d9fc-4052-905e-92d01579e3f1" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/das.dll" Name="19e464a4-7408-49bd-b960-53446ae47820" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/deviceaccess.dll" Name="797e4878-22cf-452a-86ff-3872d880f93b" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- Provider name is Dolby Access with a space -->
+    <EventProvider Id="TraceLogging/DolbyAccess_10f76fc39839" Name="7db49c14-b9f8-4d6c-a328-10f76fc39839" Level="4" NonPagedMemory="false" />
+    <!-- Provider name is Dolby Access with a space -->
+    <EventProvider Id="TraceLogging/DolbyAccess_10f76fc39840" Name="7db49c14-b9f8-4d6c-a328-10f76fc39840" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="WPP/MediaEngineCtrlGuid" Name="c9c074d2-ff9b-410f-8ac6-81c7b8e60d0f" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/microsoft.bluetooth.audio.dll" Name="6F3A682E-24E1-4073-93F2-15327F542536" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/microsoft.bluetooth.profiles.hidovergatt.dll" Name="0107cf95-313a-473e-9078-e73cd932f2fe" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.ApoTrace" Name="8b4a0b51-5dcf-5a9c-2817-95d0ec876a87" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.AudioEngineUtil" Name="2c2677bd-bc9a-5a88-4772-6f17de82b2c7" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.BackgroundAudioPolicy" Name="f0372af2-cc46-56c0-2bb9-db2e31b2423d" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Client" Name="6e7b1892-5288-5fe5-8f34-e3b0dc671fd2" Level="4" Stack="true" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Client.Plugin" Name="37e6b6cc-3f66-5c13-b9f8-574cfb014a9e" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Client.Streaming" Name="d236a4a0-253f-58c9-5616-2b576ce9331a" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.CrossProcess" Name="d375f14e-9624-5a18-f53e-5bce2043a97f" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.CrossVmApi" Name="1c422688-6e75-5d05-80b0-757366b0a5de" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.DapEncoder" Name="cb729f91-4e9b-4698-a6c6-587faa6eaf4a" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.DeviceGraph" Name="64788b34-e8e5-5664-af50-45afb294a1dc" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.EndpointBuilder" Name="0e7e8596-d648-5c94-adbd-3d780faa58e8" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.EndpointCharacteristics" Name="ec6ede49-f40f-5f93-8651-a4edc18afe06" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Engine" Name="46df03df-beab-5f0b-7eb2-e471c1bea993" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.HrtfApo" Name="52000e1d-a0d3-55cd-dd29-631ed05d560e" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.InboxEffects" Name="54dc5472-46e8-5f6d-c555-54eab87bccbf" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.KernelStreamingEndpoint" Name="553ca39b-c608-566d-18ae-7b9a03a39acd" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.License" Name="030fa765-f1ae-448e-955b-44d76073e1dc" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.MatEncoder" Name="6d1f8b4f-1d23-4f48-89fb-fb76e1be10bd" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.MultimediaDevice" Name="a076f707-4472-5083-d14f-826d0ef75c78" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.PolicyConfig" Name="767166e4-869c-5cc7-4f54-b13d12274111" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Pump" Name="8d37b4a3-2c54-560f-7b2e-b992d023682a" Level="4" NonPagedMemory="false" />
+    <!-- AudioServiceTracingKeywords::ENDPOINTCHARACTERISTICS -->
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service" Name="3d2b6366-47a4-5e10-6974-e5f7de0d3f28" Level="4" NonPagedMemory="false">
+      <StackKeywordLevelFilter FilterIn="true" Level="4">
+        <Keyword Value="0x10" />
+      </StackKeywordLevelFilter>
+    </EventProvider>
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.ASA.Pathfinder" Name="F3647E0D-CB56-4837-A268-981EB18A5B46" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.ASA.Triton" Name="6f045463-a602-4891-b732-1b6572d54dbe" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.PolicyManager" Name="9dd93434-0865-5629-c753-70c27ff40dc7" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.VAC" Name="d50a5002-97cb-46df-93c8-94ce03beed99" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.XboxPolicyManager" Name="93ba57c6-201d-5390-dacb-86f28825a7f3" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.Audio3D" Name="d1af2c40-3880-47c9-ade0-0fc1a909be08" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.CrossProcess" Name="9ac9593a-8e9e-5c4c-6407-43c56769851b" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.Metadata" Name="c9f9ecd3-6d24-46d8-b23f-37b53fa6447b" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.Realtime" Name="a02e709c-324f-5eda-29cd-cc48d92c7f23" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.Renderer" Name="3b11f303-2e4f-4856-9a63-1de8c1baebfb" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.ResourceManager" Name="2266b8d6-11dd-5bfe-d5f2-067e37b194b8" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.SpatializerApo" Name="8610d647-7680-56eb-eebf-91ab889f2dc7" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VirtualSurroundApo" Name="166d2c82-4c89-53aa-a9ee-d558d0ce0362" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager" Name="b8efdc71-988b-50be-86bb-0f97b0a3a7c8" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager2" Name="6fc36b25-61ac-5e62-b785-94b344e0702b" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.8" Name="35b65f6b-fb4e-57d6-2927-7c63ad03dbcb" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.81" Name="8f8942e2-66b4-5650-8cf1-de723ca48565" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.9" Name="c34eefdb-d72f-5786-6247-78a1e39be7fa" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Capture.MFCaptureEngine" Name="c715453b-5d50-4ed1-8304-2ffca01cbd00" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Capture.Photography" Name="2aa2b8df-8a4e-52a7-8cc7-c72f28293393" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Containers.Manager" Name="9D911DDB-D45F-41C3-B766-D566D2655C4A" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Devices.Midi" Name="aadd3984-67ee-4354-94a1-18f762026c86" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.DirectX.DirectSound" Name="9d4b9c90-b835-595e-7125-ec72cbc9334e" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.FaultReporting" Name="1377561D-9312-452C-AD13-C4A1C9C906E0" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.HangReporting" Name="3E0D88DE-AE5C-438A-BB1C-C2E627F8AECB" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Media.Audio.AudioGraph" Name="0d641fb9-a0e3-42e3-9e9d-501d33a6fa79" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Media.Editing" Name="1123dc81-0423-4f27-bf57-6619e6bf85cc" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Media.Playback.BackgroundMediaPlayback" Name="3a2e5a5c-9cac-5e49-f93a-fbe76451b4ad" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.AdaptiveMediaSource" Name="1d988eb8-0133-5903-ae68-4d44ea8abb85" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.ASFSource" Name="27df94e7-11d1-58e5-885d-f1969b998936" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.AVISource" Name="603bc3ed-ad38-4d30-beb0-36721b0532fe" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.CallStack" Name="53cc8a8b-3182-5101-7405-8dfc7e5f313e" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.CCParser" Name="f173d469-1033-536c-f27b-92c5a463df8d" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.CodecAppSvc" Name="fbdc4594-a4a9-5f04-af86-7bd18a7938b9" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.DolbyAtmosDecoder" Name="5828b13b-49ca-4017-9455-7e6c0c36eb6a" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.DVDNav" Name="1d99a835-42bc-5bef-a10b-caae0d54fd0f" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.EVROTA" Name="209814d7-1019-4651-9aaf-794b1bca59d2" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.FlacDecoder" Name="6b0310a6-0ff4-47d2-a554-a1bb260f9617" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.FLVSource" Name="4223ac43-166d-4b7f-b19b-1e294148be10" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.FrameServer" Name="ec50b9c2-b123-4552-931f-c4826f70a67e" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.H264Decoder" Name="b71ee1de-b092-4737-a55f-ecdf2e70e6be" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.H264Encoder" Name="deb6de00-a0cb-5689-f9f9-f26cb3970205" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.H265Decoder" Name="8eff71c4-cb3e-5664-86bf-7e15bd6f9fa4" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MediaCapture" Name="3ff44415-ee99-4f03-bc9e-e4a1d1833418" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MediaEngine" Name="3e72573a-5c5f-5ed8-d6f1-f1b44db1b81b" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MediaPlaylist" Name="7cffb6e3-de5a-572a-9ece-998321af6e81" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MediaSession" Name="6ade59e8-a7c0-53d6-c3e0-8fe89759ca13" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MediaTrack" Name="a2d70276-f073-51e6-6f13-e5263a121027" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MediaTranscode" Name="afbd9bfb-785c-515d-8ede-c31081bf8872" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MFDS" Name="4d0b22c3-3b49-5af6-ba09-0a1cda1083c4" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MFTranscode" Name="79ff5184-a1b1-490d-9662-7a92fd588858" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MKVSource" Name="4f4ac2ca-3a70-5f37-3f2c-2cb11f16b596" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MP3Source" Name="c6f749c6-fbe8-5c8d-f3b1-aca1563d7be3" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MPEG4Source" Name="85e2da35-d4fe-5a85-0874-ed763688fd59" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MPEGDecoder" Name="44484773-a039-5c4a-d95c-2c23f586497c" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.MSE" Name="b5f30508-38bb-5033-4f81-7de7fe7c4369" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.OpusDecoder" Name="63e17c10-2d43-4c42-8fe3-8d8b63e46a6a" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.OTA" Name="d63aebf8-bec4-4e76-8f7c-9565792ac782" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.SAR" Name="5100ef35-4747-4d3f-92a1-4ed6d661c3fb" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.SinkWriter" Name="ca1d0166-619f-4177-a6c5-6faae46b42ef" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.SourceReader" Name="86bf288b-fe8c-4174-98aa-0ea625a0bea6" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.SourceResolver" Name="645a72a6-1657-53bb-d5e7-d6526033ef20" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.SVR" Name="fc40bb95-722a-5366-9c5e-1a73d989faea" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.TelemetrySession" Name="6b4e98da-b103-588e-d0db-c7a111582066" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.UVC" Name="8aef5633-dae7-43e9-bd1d-c620598e56d0" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.VP9Decoder" Name="fe9ef1dd-9fad-548c-5563-5df4b7c5b889" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.WMVDecoder" Name="ed2c1ccc-a5ec-5cea-ef9a-88905c5d4950" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.XVP" Name="d5cc9846-9cd8-5306-dece-438825703e54" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.MediaFoundation.ZuneMedia" Name="44256e21-13be-597b-554b-735792690cde" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.WindowsErrorReporting" Name="cc79cf77-70d9-4082-9b52-23f3a3e92fe4" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Audio" Name="ae4bd3be-f36f-45b6-8d21-bdd6fb832853" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-DVD" Name="e18d0fca-9515-4232-98e4-89e456d8551b" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Network" Name="7dd42a49-5329-4832-8dfd-43d979153a88" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Media-BackgroundPolicy" Name="5b1c79f0-a7b1-4fb1-a3c7-374528a7b075" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-MediaEngine" Name="8f2048e0-f260-4f57-a8d1-932376291682" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-MediaFoundation-MSVProc" Name="a4112d1a-6dfa-476e-bb75-e350d24934e1" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-MediaFoundation-Performance" Name="f404b94e-27e0-4384-bfe8-1d8d390b0aa3" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-MediaFoundation-Performance-Core" Name="b20e65ac-c905-4014-8f78-1b6a508142eb" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Media-Playback" Name="6a1f212d-9fc8-4878-bcf4-4be623b84525" Level="3" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-NCSI" Name="314de49f-ce63-4779-ba2b-d616f6963a88" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-NWiFi" Name="0bd3506a-9030-4f76-9b88-3e8fe1f7cfb6" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-OneCore-Bluetooth-AG" Name="22a7b160-f6e8-46b9-8e0b-a51989c85c66" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-PDC" Name="a6bf0deb-3659-40ad-9f81-e25af62ce3c7" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-RTWorkQueue-Threading" Name="e18d0fc9-9515-4232-98e4-89e456d8551b" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Runtime-Media" Name="8f0db3a8-299b-4d64-a4ed-907b409d4584" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Shell-Core" Name="30336ed4-e327-447c-9de0-51b652c86108" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Warp" Name="ee685ec4-8270-4b08-9e4e-8b356f48f92f" Level="18" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-WinHttp" Name="7d44233d-3055-4b9c-ba64-0d47ca40a232" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-WinRT-Error" Name="a86f8471-c31d-4fbc-a035-665d06047b03" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="Manifested/Microsoft-Windows-WLAN-AutoConfig" Name="9580d7dd-0379-4658-9870-d5be7d52d6de" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="WPP/ndis.sys" Name="dd7a21e6-a651-46d4-b7c2-66543067b869" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="WPP/PlayReady" Name="00000000-7ac4-430a-94e4-b0dfd254650f" Level="32" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="TraceLogging/PlayReadyITA" Name="9af106fc-dc26-42e1-a0f1-0c538f78f553" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="WPP/ProxyAPO_CTLGUID_AUDIO_APO_DRIVER" Name="A0F8425A-DAAD-486D-BDC6-4A24CB136B6F" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/QCListenSoundModel_CntrlQCSounModelDll" Name="435B6D64-B9CE-4DB5-BAF6-11060BC7656F" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/rltkapou64.dll" Name="2F227417-8412-4609-940A-7C6434EF8F59" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/rtkauduservice64.exe" Name="70BAF744-A8EB-4B46-B61F-143424DBB7BA" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/rtkuwp.exe" Name="D9717069-655A-4A16-B3E0-6FEEAA0018F3" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/windows.devices.background.dll" Name="fd35e984-9dee-4011-9eae-5c135b050261" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/windows.devices.enumeration.dll" Name="1b42986f-288f-4dd7-b7f9-120297715c1e" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/wshbth.dll" Name="9b65317a-28c3-43d8-9740-81a404a621ed" Level="4" NonPagedMemory="false">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- Previously known as AfxLogger -->
+    <EventProvider Id="WPP/AcxLogger" Name="2393c85d-b36a-4fe2-86a9-12500a05b76a" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <!-- SoundWire aggregator -->
+    <EventProvider Id="WPP/AggregatorLogger" Name="AFE46255-51C8-4544-92C1-94CCCD8E9352" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/ApxKm" Name="e3a25276-cd6e-40dc-8bb6-1659a5e00952" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/AvStream" Name="46deb98e-b7d7-4578-a15a-e3f365c73ddb" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/btampm.sys" Name="dfe2ecb4-536b-44ae-8011-67a8e2c3ca96" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/btha2dp.sys" Name="b79b9c1f-2626-4d0c-9574-5cfce4e793e6" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthavrcptg.sys" Name="a8e3e135-780c-4e4a-8410-f4da062e5981" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthenum.sys" Name="f1cd3858-7ee7-43c4-b86a-dcd1bc873269" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthhfaud.sys" Name="565d84dc-23f7-400a-b2fa-23580731f09f" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthl2cap.sys" Name="29538491-778c-4870-a489-189fe97c82e8" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthmini.sys" Name="f0cb5d88-0c28-475a-8ae9-d3331ed861de" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthmodem.sys" Name="8e1871af-671e-43a2-907a-8adf4bf687ee" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthport.sys" Name="d88ace07-cac0-11d8-a4c6-000d560bcba5" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/bthusb.sys" Name="ff9d953d-86cd-4a4f-b8df-b7236cb640a8" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/CompositorLogger" Name="75617473-6520-4B37-8FDF-D7D160972649" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/hdaudio.sys-hdaudbus.sys" Name="b3a109ec-1cb3-4947-95ed-431033eeb1b4" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/hidbth.sys" Name="07699ff6-d2c0-4323-b927-2c53442ed29b" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/IntcBTle" Name="3c8f706f-5383-4ace-8b15-c28eed5c8633" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/intcdaud.sys" Name="8419744c-2c42-4524-9a9e-400abdd7452b" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-Cherrytrail-Audio-255EA6F4" Name="255ea6f4-efc3-4b36-86c4-0790519269eb" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-DetectionVerificationDrv" Name="944e9848-1ff2-47b3-a768-f0abb159bddf" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-Haswell-Audio-73E110CB" Name="73e110cb-5193-48b2-aa34-ad12a63003b2" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-Haswell-Audio-ABFCC127" Name="abfcc127-b87e-4bf3-a1f7-e6c9364bb321" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcAudioBus" Name="2c20ed53-da32-4838-b4f5-6f20b6cd57e8" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcBTAu" Name="1a296487-62d7-4ecc-b84f-834c37ad6795" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcDMic" Name="5a045e14-51e2-4a92-b3ec-e47bc8865ee3" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcOED" Name="5827D197-5626-4B90-9E21-6EA40DC1DF19" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcSNDW" Name="88af8A3f-7433-4bf9-a11f-c1b6fe787f0a" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcSST" Name="8ebfe511-1205-401d-aece-361ac5d5aae6" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-RefCodec" Name="adbad317-738a-449f-8600-d88013294e57" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/KmdfTraceGuid-kernel" Name="544d4c9d-942c-46d5-bf50-df5cd9524a50" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/KmdfTraceGuid-user" Name="485e7de9-0a80-11d8-ad15-505054503030" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.AudioClassExtension" Name="cb306fbc-d202-5666-f075-23a1ab91bea9" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.HdAudBus" Name="653880c0-4e64-56c1-5503-c1a609292702" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.PortClass" Name="bebd6159-6f76-5a22-366a-7753c2a63c3c" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth" Name="d951cb3f-2cba-4a1c-9436-6cf2e904dde8" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth.BthA2dp" Name="8776AD1E-5022-4451-A566-F47E708B9075" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth.HfEnum" Name="9680893F-0696-4EC0-9AF5-65974897C9D4" Level="4" NonPagedMemory="true" />
+    <!-- Also Manifested/Microsoft-Windows-Kernel-Timer -->
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Kernel.Timer" Name="f2d06f08-592d-508c-c3aa-76f396fe18bd" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Bluetooth-Bthmini" Name="db25b328-a6f6-444f-9d97-a50e20217d16" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-BTH-AudioClassDriver" Name="ddb6da39-08a7-4579-8d0c-68011146e205" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-BTH-BTHPORT" Name="8a1f9517-3a8c-4a9e-a018-4f17a200f277" Level="4" NonPagedMemory="true" />
+    <!-- CodeIntegrity team says this shouldn't require nonpaged pool, but experiments suggest it does -->
+    <EventProvider Id="Manifested/Microsoft-Windows-CodeIntegrity" Name="4ee76bd8-3cf4-44a0-a0ac-3937643e37a3" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Acpi" Name="C514638F-7723-485b-BCFC-96565D735D4A" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Pep" Name="5412704e-b2e1-4624-8ffd-55777b8f7373" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Power" Name="331c3b3a-2005-44c2-ac5e-77220c37d6b4" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Processor-Power" Name="0f67e49f-fe51-4e9f-b490-6f2948cc6027" Level="4" NonPagedMemory="true">
+      <CaptureStateOnSave>
+        <Keyword Value="0x2" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="Manifested/Microsoft-Windows-MMCSS" Name="36008301-e154-466c-acec-5f4cbd6b4694" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-UserModePowerService" Name="ce8dee0b-d539-4000-b0f8-77bed049c590" Level="5" NonPagedMemory="true">
+      <CaptureStateOnSave>
+        <Keyword Value="0x0" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="Manifested/Microsoft-Windows-Win32k" Name="8c416c79-d49b-4f01-a467-e56d3aa8234c" Level="255" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x2E2000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Manifested/nvhda64vETW" Name="29A65B64-ED2D-491D-AFA0-97EB4373AD69" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="WPP/portcls.sys" Name="10eb6007-818c-4db6-a694-b518e589d07a" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/qcadcm8998_TraceDebug" Name="1C2B2962-2C8A-4BD0-9E6A-022BE277C9E4" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/qcadcm8998_WppDbg" Name="55F4DAF3-7F96-4638-837B-6A5232DF0FC1" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/qcauddev8998_TraceDebug" Name="D3D7C968-4842-4C61-994E-2AAD4DBA2C18" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/qcaudminiport8998_CTLGUID_AUDIO_DRIVER_1" Name="B92C2819-2DAA-4804-BC96-720A82209897" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/qcbtfmuart8998_qca_shb_wpp" Name="C484A08D-41CE-4CD6-AF73-06F987827ACE" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Qualcomm-Audio-410BA701" Name="410ba701-c0a7-4806-803c-cfab7d50ab21" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Qualcomm-Audio-47EAD127" Name="47ead127-8b6b-4d3f-ba45-f16bb6764bb7" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Qualcomm-Audio-50D281BF" Name="50d281bf-b799-456d-be51-2b7d4c24c0b0" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Qualcomm-Audio-DC11A30A" Name="dc11a30a-f869-4d67-9a66-83b5ff1e1340" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/rfcomm.sys" Name="f1b0ec6a-87cb-4eaa-bfba-82770400a80b" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/rtksdcaxu.sys" Name="47BE3522-EAE5-47F4-9EE0-BC4260C39937" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/rtkvhd64.sys" Name="014d2cd1-ecf3-4931-a286-380b0a8e018e" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/sndwiredsp.sys" Name="5CA06119-B270-46D2-A918-6A7F84C6C1EC" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- SoundWire -->
+    <EventProvider Id="WPP/SndwLogger" Name="CFF9D47E-C80F-4B80-B303-52CA51A8DB45" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="TraceLogging/TelemetryAssert" Name="6D1B249D-131B-468A-899B-FB0AD9551772" Level="5" NonPagedMemory="true" />
+    <EventProvider Id="WPP/usbaudio.sys-bthhfenum.sys" Name="bf94d329-c5f9-4deb-ad29-2c6682d485f0" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/usbaudio2.sys" Name="641f2b2d-ea1d-4b67-9b3c-e7da318898ae" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <Profile Id="audio-info.Verbose.Memory" LoggingMode="Memory" Name="audio-info" DetailLevel="Verbose" Description="audio-info profile">
+      <Collectors>
+        <SystemCollectorId Value="SystemCollector">
+          <SystemProviderId Value="SystemProvider" />
+        </SystemCollectorId>
+        <EventCollectorId Value="PagedPoolCollector">
+          <EventProviders>
+            <EventProviderId Value="WMI/AEWMIGUID" />
+            <EventProviderId Value="WPP/ApxGuid" />
+            <EventProviderId Value="WPP/AudioTrace" />
+            <EventProviderId Value="WPP/bisrv.dll" />
+            <EventProviderId Value="WPP/bluetoothapis.dll" />
+            <EventProviderId Value="WPP/brokerlib.dll" />
+            <EventProviderId Value="WPP/btagservice.dll" />
+            <EventProviderId Value="WPP/bthavctpsvc.dll" />
+            <EventProviderId Value="WPP/bthavrcp.dll" />
+            <EventProviderId Value="WPP/bthhfsrv.dll" />
+            <EventProviderId Value="WPP/bthprops.cpl" />
+            <EventProviderId Value="WPP/bthradiomedia.dll" />
+            <EventProviderId Value="WPP/bthserv.dll" />
+            <EventProviderId Value="WPP/BthSMTCMediaController.dll" />
+            <EventProviderId Value="WPP/bthtelemetry.dll" />
+            <EventProviderId Value="WPP/CamTraceGuid" />
+            <EventProviderId Value="WPP/CTRLGUID_MF_CAPTURE_ENGINE" />
+            <EventProviderId Value="WPP/CTRLGUID_MF_CORE_MFTS" />
+            <EventProviderId Value="WPP/CTRLGUID_MF_CORE_SINKS" />
+            <EventProviderId Value="WPP/CTRLGUID_MF_CORE_SOURCES" />
+            <EventProviderId Value="WPP/CTRLGUID_MF_NETWORK" />
+            <EventProviderId Value="WPP/CTRLGUID_MF_PIPELINE" />
+            <EventProviderId Value="WPP/CTRLGUID_MF_PLATFORM" />
+            <EventProviderId Value="WPP/CTRLGUID_MF_PLAY" />
+            <EventProviderId Value="WPP/dafbth.dll" />
+            <EventProviderId Value="WPP/das.dll" />
+            <EventProviderId Value="WPP/deviceaccess.dll" />
+            <EventProviderId Value="TraceLogging/DolbyAccess_10f76fc39839" />
+            <EventProviderId Value="TraceLogging/DolbyAccess_10f76fc39840" />
+            <EventProviderId Value="WPP/MediaEngineCtrlGuid" />
+            <EventProviderId Value="WPP/microsoft.bluetooth.audio.dll" />
+            <EventProviderId Value="WPP/microsoft.bluetooth.profiles.hidovergatt.dll" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.ApoTrace" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.AudioEngineUtil" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.BackgroundAudioPolicy" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Client" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Client.Plugin" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Client.Streaming" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.CrossProcess" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.CrossVmApi" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.DapEncoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.DeviceGraph" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.EndpointBuilder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.EndpointCharacteristics" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Engine" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.HrtfApo" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.InboxEffects" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.KernelStreamingEndpoint" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.License" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.MatEncoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.MultimediaDevice" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.PolicyConfig" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Pump" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Service" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Service.ASA.Pathfinder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Service.ASA.Triton" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Service.PolicyManager" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Service.VAC" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Service.XboxPolicyManager" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Spatial.Audio3D" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Spatial.CrossProcess" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Spatial.Metadata" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Spatial.Realtime" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Spatial.Renderer" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.Spatial.ResourceManager" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.SpatializerApo" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.VirtualSurroundApo" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager2" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.8" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.81" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.9" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Capture.MFCaptureEngine" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Capture.Photography" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Containers.Manager" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Devices.Midi" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.DirectX.DirectSound" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.FaultReporting" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.HangReporting" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Media.Audio.AudioGraph" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Media.Editing" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Media.Playback.BackgroundMediaPlayback" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.AdaptiveMediaSource" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.ASFSource" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.AVISource" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.CallStack" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.CCParser" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.CodecAppSvc" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.DolbyAtmosDecoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.DVDNav" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.EVROTA" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.FlacDecoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.FLVSource" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.FrameServer" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.H264Decoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.H264Encoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.H265Decoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MediaCapture" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MediaEngine" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MediaPlaylist" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MediaSession" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MediaTrack" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MediaTranscode" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MFDS" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MFTranscode" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MKVSource" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MP3Source" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MPEG4Source" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MPEGDecoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.MSE" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.OpusDecoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.OTA" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.SAR" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.SinkWriter" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.SourceReader" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.SourceResolver" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.SVR" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.TelemetrySession" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.UVC" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.VP9Decoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.WMVDecoder" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.XVP" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.MediaFoundation.ZuneMedia" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.WindowsErrorReporting" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Audio" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-DVD" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Kernel-Network" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Media-BackgroundPolicy" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-MediaEngine" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-MediaFoundation-MSVProc" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-MediaFoundation-Performance" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-MediaFoundation-Performance-Core" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Media-Playback" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-NCSI" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-NWiFi" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-OneCore-Bluetooth-AG" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-PDC" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-RTWorkQueue-Threading" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Runtime-Media" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Shell-Core" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Warp" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-WinHttp" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-WinRT-Error" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-WLAN-AutoConfig" />
+            <EventProviderId Value="WPP/ndis.sys" />
+            <EventProviderId Value="WPP/PlayReady" />
+            <EventProviderId Value="TraceLogging/PlayReadyITA" />
+            <EventProviderId Value="WPP/ProxyAPO_CTLGUID_AUDIO_APO_DRIVER" />
+            <EventProviderId Value="WPP/QCListenSoundModel_CntrlQCSounModelDll" />
+            <EventProviderId Value="WPP/rltkapou64.dll" />
+            <EventProviderId Value="WPP/rtkauduservice64.exe" />
+            <EventProviderId Value="WPP/rtkuwp.exe" />
+            <EventProviderId Value="WPP/windows.devices.background.dll" />
+            <EventProviderId Value="WPP/windows.devices.enumeration.dll" />
+            <EventProviderId Value="WPP/wshbth.dll" />
+          </EventProviders>
+        </EventCollectorId>
+        <EventCollectorId Value="NonpagedPoolCollector">
+          <EventProviders>
+            <EventProviderId Value="WPP/AcxLogger" />
+            <EventProviderId Value="WPP/AggregatorLogger" />
+            <EventProviderId Value="WPP/ApxKm" />
+            <EventProviderId Value="WPP/AvStream" />
+            <EventProviderId Value="WPP/btampm.sys" />
+            <EventProviderId Value="WPP/btha2dp.sys" />
+            <EventProviderId Value="WPP/bthavrcptg.sys" />
+            <EventProviderId Value="WPP/bthenum.sys" />
+            <EventProviderId Value="WPP/bthhfaud.sys" />
+            <EventProviderId Value="WPP/bthl2cap.sys" />
+            <EventProviderId Value="WPP/bthmini.sys" />
+            <EventProviderId Value="WPP/bthmodem.sys" />
+            <EventProviderId Value="WPP/bthport.sys" />
+            <EventProviderId Value="WPP/bthusb.sys" />
+            <EventProviderId Value="WPP/CompositorLogger" />
+            <EventProviderId Value="WPP/hdaudio.sys-hdaudbus.sys" />
+            <EventProviderId Value="WPP/hidbth.sys" />
+            <EventProviderId Value="WPP/IntcBTle" />
+            <EventProviderId Value="WPP/intcdaud.sys" />
+            <EventProviderId Value="WPP/Intel-Cherrytrail-Audio-255EA6F4" />
+            <EventProviderId Value="WPP/Intel-DetectionVerificationDrv" />
+            <EventProviderId Value="WPP/Intel-Haswell-Audio-73E110CB" />
+            <EventProviderId Value="WPP/Intel-Haswell-Audio-ABFCC127" />
+            <EventProviderId Value="WPP/Intel-IntcAudioBus" />
+            <EventProviderId Value="WPP/Intel-IntcBTAu" />
+            <EventProviderId Value="WPP/Intel-IntcDMic" />
+            <EventProviderId Value="WPP/Intel-IntcOED" />
+            <EventProviderId Value="WPP/Intel-IntcSNDW" />
+            <EventProviderId Value="WPP/Intel-IntcSST" />
+            <EventProviderId Value="WPP/Intel-RefCodec" />
+            <EventProviderId Value="WPP/KmdfTraceGuid-kernel" />
+            <EventProviderId Value="WPP/KmdfTraceGuid-user" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.AudioClassExtension" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.HdAudBus" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.PortClass" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Bluetooth" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Bluetooth.BthA2dp" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Bluetooth.HfEnum" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Kernel.Timer" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Bluetooth-Bthmini" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-BTH-AudioClassDriver" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-BTH-BTHPORT" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-CodeIntegrity" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Kernel-Acpi" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Kernel-Pep" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Kernel-Power" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Kernel-Processor-Power" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-MMCSS" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-UserModePowerService" />
+            <EventProviderId Value="Manifested/Microsoft-Windows-Win32k" />
+            <EventProviderId Value="Manifested/nvhda64vETW" />
+            <EventProviderId Value="WPP/portcls.sys" />
+            <EventProviderId Value="WPP/qcadcm8998_TraceDebug" />
+            <EventProviderId Value="WPP/qcadcm8998_WppDbg" />
+            <EventProviderId Value="WPP/qcauddev8998_TraceDebug" />
+            <EventProviderId Value="WPP/qcaudminiport8998_CTLGUID_AUDIO_DRIVER_1" />
+            <EventProviderId Value="WPP/qcbtfmuart8998_qca_shb_wpp" />
+            <EventProviderId Value="WPP/Qualcomm-Audio-410BA701" />
+            <EventProviderId Value="WPP/Qualcomm-Audio-47EAD127" />
+            <EventProviderId Value="WPP/Qualcomm-Audio-50D281BF" />
+            <EventProviderId Value="WPP/Qualcomm-Audio-DC11A30A" />
+            <EventProviderId Value="WPP/rfcomm.sys" />
+            <EventProviderId Value="WPP/rtksdcaxu.sys" />
+            <EventProviderId Value="WPP/rtkvhd64.sys" />
+            <EventProviderId Value="WPP/sndwiredsp.sys" />
+            <EventProviderId Value="WPP/SndwLogger" />
+            <EventProviderId Value="TraceLogging/TelemetryAssert" />
+            <EventProviderId Value="WPP/usbaudio.sys-bthhfenum.sys" />
+            <EventProviderId Value="WPP/usbaudio2.sys" />
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+</WindowsPerformanceRecorder>
