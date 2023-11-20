@@ -513,6 +513,11 @@
         <Keyword Value="0x7fffffff" />
       </Keywords>
     </EventProvider>
+    <EventProvider Id="WPP/BTTranslation_TraceDebug" Name="D53819B5-0747-43D0-9B5A-2F9BBDF43412" Level="5" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
     <EventProvider Id="WPP/CirrusSdcaXu" Name="4321F00D-5432-40BA-A8D6-8FDBE1B40ABB" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7fffffff" />
@@ -673,6 +678,11 @@
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
     </EventProvider>
+    <EventProvider Id="WPP/qcasd_apo_TraceDebug" Name="822B9130-6502-434A-A11F-279E7EFEDEE6" Level="5" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
     <EventProvider Id="WPP/qcasd_TraceDebug" Name="1281D603-3BBD-4137-9127-D0A2DD43047C" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7fffffff" />
@@ -683,12 +693,22 @@
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
     </EventProvider>
+    <EventProvider Id="WPP/QCAudDriverX_TraceDebug" Name="39BC4F78-EFAF-4407-A4EC-1356C5D06774" Level="5" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
     <EventProvider Id="WPP/qcaudminiport8998_CTLGUID_AUDIO_DRIVER_1" Name="B92C2819-2DAA-4804-BC96-720A82209897" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
     </EventProvider>
     <EventProvider Id="WPP/qcbtfmuart8998_qca_shb_wpp" Name="C484A08D-41CE-4CD6-AF73-06F987827ACE" Level="5" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7FFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/qcslimbus8998_SlimBusTraceGuid" Name="C951B320-B923-4F26-A9BA-DA30550F2136" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
@@ -1019,6 +1039,7 @@
             <EventProviderId Value="WPP/bthmodem.sys" />
             <EventProviderId Value="WPP/bthport.sys" />
             <EventProviderId Value="WPP/bthusb.sys" />
+            <EventProviderId Value="WPP/BTTranslation_TraceDebug" />
             <EventProviderId Value="WPP/CirrusSdcaXu" />
             <EventProviderId Value="WPP/CompositorLogger" />
             <EventProviderId Value="WPP/hdaudio.sys-hdaudbus.sys" />
@@ -1064,10 +1085,13 @@
             <EventProviderId Value="WPP/portcls.sys" />
             <EventProviderId Value="WPP/qcadcm8998_TraceDebug" />
             <EventProviderId Value="WPP/qcadcm8998_WppDbg" />
+            <EventProviderId Value="WPP/qcasd_apo_TraceDebug" />
             <EventProviderId Value="WPP/qcasd_TraceDebug" />
             <EventProviderId Value="WPP/qcauddev8998_TraceDebug" />
+            <EventProviderId Value="WPP/QCAudDriverX_TraceDebug" />
             <EventProviderId Value="WPP/qcaudminiport8998_CTLGUID_AUDIO_DRIVER_1" />
             <EventProviderId Value="WPP/qcbtfmuart8998_qca_shb_wpp" />
+            <EventProviderId Value="WPP/qcslimbus8998_SlimBusTraceGuid" />
             <EventProviderId Value="WPP/Qualcomm-Audio-410BA701" />
             <EventProviderId Value="WPP/Qualcomm-Audio-47EAD127" />
             <EventProviderId Value="WPP/Qualcomm-Audio-50D281BF" />
