@@ -4,15 +4,15 @@
     <!-- Collector for system tracing -->
     <SystemCollector Id="SystemCollector" Name="System Collector">
       <BufferSize Value="256" />
-      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="256" />
+      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="128" />
     </SystemCollector>
     <EventCollector Id="PagedPoolCollector" Name="PagedPoolCollector">
       <BufferSize Value="256" />
-      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="64" />
+      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="128" />
     </EventCollector>
     <EventCollector Id="NonpagedPoolCollector" Name="NonpagedPoolCollector">
       <BufferSize Value="256" />
-      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="64" />
+      <Buffers Value="3" PercentageOfTotalMemory="true" MaximumBufferSpace="128" />
     </EventCollector>
     <SystemProvider Id="SystemProvider">
       <Keywords>
@@ -27,14 +27,9 @@
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
     </EventProvider>
-    <EventProvider Id="WPP/AudioTrace" Name="e27950eb-1768-451f-96ac-cc4e14f6d3d0" Level="4" NonPagedMemory="false">
+    <EventProvider Id="WPP/AudioTrace" Name="e27950eb-1768-451f-96ac-cc4e14f6d3d0" Level="5" NonPagedMemory="false">
       <Keywords>
         <Keyword Value="0x7FFFFFFF" />
-      </Keywords>
-    </EventProvider>
-    <EventProvider Id="WPP/bisrv.dll" Name="d2440861-bf3e-4f20-9fdc-e94e88dbe1f6" Level="4" NonPagedMemory="false">
-      <Keywords>
-        <Keyword Value="0x7fffffff" />
       </Keywords>
     </EventProvider>
     <EventProvider Id="WPP/bluetoothapis.dll" Name="c872ff32-5a0c-4736-bdf2-334c9b8d429f" Level="2" NonPagedMemory="false">
@@ -172,38 +167,38 @@
         <Keyword Value="0x7fffffff" />
       </Keywords>
     </EventProvider>
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.ApoTrace" Name="8b4a0b51-5dcf-5a9c-2817-95d0ec876a87" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.AudioEngineUtil" Name="2c2677bd-bc9a-5a88-4772-6f17de82b2c7" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.BackgroundAudioPolicy" Name="f0372af2-cc46-56c0-2bb9-db2e31b2423d" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Client" Name="6e7b1892-5288-5fe5-8f34-e3b0dc671fd2" Level="4" Stack="true" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Client.Plugin" Name="37e6b6cc-3f66-5c13-b9f8-574cfb014a9e" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.ApoTrace" Name="8b4a0b51-5dcf-5a9c-2817-95d0ec876a87" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.AudioEngineUtil" Name="2c2677bd-bc9a-5a88-4772-6f17de82b2c7" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.BackgroundAudioPolicy" Name="f0372af2-cc46-56c0-2bb9-db2e31b2423d" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Client" Name="6e7b1892-5288-5fe5-8f34-e3b0dc671fd2" Level="5" Stack="true" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Client.Plugin" Name="37e6b6cc-3f66-5c13-b9f8-574cfb014a9e" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Client.Streaming" Name="d236a4a0-253f-58c9-5616-2b576ce9331a" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.CrossProcess" Name="d375f14e-9624-5a18-f53e-5bce2043a97f" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.CrossVmApi" Name="1c422688-6e75-5d05-80b0-757366b0a5de" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.DapEncoder" Name="cb729f91-4e9b-4698-a6c6-587faa6eaf4a" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.DeviceGraph" Name="64788b34-e8e5-5664-af50-45afb294a1dc" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.EndpointBuilder" Name="0e7e8596-d648-5c94-adbd-3d780faa58e8" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.EndpointCharacteristics" Name="ec6ede49-f40f-5f93-8651-a4edc18afe06" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Engine" Name="46df03df-beab-5f0b-7eb2-e471c1bea993" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.HrtfApo" Name="52000e1d-a0d3-55cd-dd29-631ed05d560e" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.InboxEffects" Name="54dc5472-46e8-5f6d-c555-54eab87bccbf" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.KernelStreamingEndpoint" Name="553ca39b-c608-566d-18ae-7b9a03a39acd" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.License" Name="030fa765-f1ae-448e-955b-44d76073e1dc" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.MatEncoder" Name="6d1f8b4f-1d23-4f48-89fb-fb76e1be10bd" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.CrossProcess" Name="d375f14e-9624-5a18-f53e-5bce2043a97f" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.CrossVmApi" Name="1c422688-6e75-5d05-80b0-757366b0a5de" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.DapEncoder" Name="cb729f91-4e9b-4698-a6c6-587faa6eaf4a" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.DeviceGraph" Name="64788b34-e8e5-5664-af50-45afb294a1dc" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.EndpointBuilder" Name="0e7e8596-d648-5c94-adbd-3d780faa58e8" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.EndpointCharacteristics" Name="ec6ede49-f40f-5f93-8651-a4edc18afe06" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Engine" Name="46df03df-beab-5f0b-7eb2-e471c1bea993" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.HrtfApo" Name="52000e1d-a0d3-55cd-dd29-631ed05d560e" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.InboxEffects" Name="54dc5472-46e8-5f6d-c555-54eab87bccbf" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.KernelStreamingEndpoint" Name="553ca39b-c608-566d-18ae-7b9a03a39acd" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.License" Name="030fa765-f1ae-448e-955b-44d76073e1dc" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.MatEncoder" Name="6d1f8b4f-1d23-4f48-89fb-fb76e1be10bd" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.MultimediaDevice" Name="a076f707-4472-5083-d14f-826d0ef75c78" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.PolicyConfig" Name="767166e4-869c-5cc7-4f54-b13d12274111" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Pump" Name="8d37b4a3-2c54-560f-7b2e-b992d023682a" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.PolicyConfig" Name="767166e4-869c-5cc7-4f54-b13d12274111" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Pump" Name="8d37b4a3-2c54-560f-7b2e-b992d023682a" Level="5" NonPagedMemory="false" />
     <!-- AudioServiceTracingKeywords::ENDPOINTCHARACTERISTICS -->
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service" Name="3d2b6366-47a4-5e10-6974-e5f7de0d3f28" Level="4" NonPagedMemory="false">
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service" Name="3d2b6366-47a4-5e10-6974-e5f7de0d3f28" Level="5" NonPagedMemory="false">
       <StackKeywordLevelFilter FilterIn="true" Level="4">
         <Keyword Value="0x10" />
       </StackKeywordLevelFilter>
     </EventProvider>
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.ASA.Pathfinder" Name="F3647E0D-CB56-4837-A268-981EB18A5B46" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.ASA.Triton" Name="6f045463-a602-4891-b732-1b6572d54dbe" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.PolicyManager" Name="9dd93434-0865-5629-c753-70c27ff40dc7" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.VAC" Name="d50a5002-97cb-46df-93c8-94ce03beed99" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.XboxPolicyManager" Name="93ba57c6-201d-5390-dacb-86f28825a7f3" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.ASA.Pathfinder" Name="F3647E0D-CB56-4837-A268-981EB18A5B46" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.ASA.Triton" Name="6f045463-a602-4891-b732-1b6572d54dbe" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.PolicyManager" Name="9dd93434-0865-5629-c753-70c27ff40dc7" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.VAC" Name="d50a5002-97cb-46df-93c8-94ce03beed99" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Service.XboxPolicyManager" Name="93ba57c6-201d-5390-dacb-86f28825a7f3" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.Audio3D" Name="d1af2c40-3880-47c9-ade0-0fc1a909be08" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.CrossProcess" Name="9ac9593a-8e9e-5c4c-6407-43c56769851b" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.Metadata" Name="c9f9ecd3-6d24-46d8-b23f-37b53fa6447b" Level="4" NonPagedMemory="false" />
@@ -212,15 +207,15 @@
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Spatial.ResourceManager" Name="2266b8d6-11dd-5bfe-d5f2-067e37b194b8" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.SpatializerApo" Name="8610d647-7680-56eb-eebf-91ab889f2dc7" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VirtualSurroundApo" Name="166d2c82-4c89-53aa-a9ee-d558d0ce0362" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager" Name="b8efdc71-988b-50be-86bb-0f97b0a3a7c8" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager2" Name="6fc36b25-61ac-5e62-b785-94b344e0702b" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager" Name="b8efdc71-988b-50be-86bb-0f97b0a3a7c8" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager2" Name="6fc36b25-61ac-5e62-b785-94b344e0702b" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.8" Name="35b65f6b-fb4e-57d6-2927-7c63ad03dbcb" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.81" Name="8f8942e2-66b4-5650-8cf1-de723ca48565" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.9" Name="c34eefdb-d72f-5786-6247-78a1e39be7fa" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Capture.MFCaptureEngine" Name="c715453b-5d50-4ed1-8304-2ffca01cbd00" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Capture.Photography" Name="2aa2b8df-8a4e-52a7-8cc7-c72f28293393" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Containers.Manager" Name="9D911DDB-D45F-41C3-B766-D566D2655C4A" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Devices.Midi" Name="aadd3984-67ee-4354-94a1-18f762026c86" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Devices.Midi" Name="aadd3984-67ee-4354-94a1-18f762026c86" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.DirectX.DirectSound" Name="9d4b9c90-b835-595e-7125-ec72cbc9334e" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.FaultReporting" Name="1377561D-9312-452C-AD13-C4A1C9C906E0" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.HangReporting" Name="3E0D88DE-AE5C-438A-BB1C-C2E627F8AECB" Level="4" NonPagedMemory="false" />
@@ -284,7 +279,6 @@
     <EventProvider Id="Manifested/Microsoft-Windows-PDC" Name="a6bf0deb-3659-40ad-9f81-e25af62ce3c7" Level="4" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-RTWorkQueue-Threading" Name="e18d0fc9-9515-4232-98e4-89e456d8551b" Level="4" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-Runtime-Media" Name="8f0db3a8-299b-4d64-a4ed-907b409d4584" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="Manifested/Microsoft-Windows-Shell-Core" Name="30336ed4-e327-447c-9de0-51b652c86108" Level="5" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-Warp" Name="ee685ec4-8270-4b08-9e4e-8b356f48f92f" Level="18" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-WinHttp" Name="7d44233d-3055-4b9c-ba64-0d47ca40a232" Level="5" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-WinRT-Error" Name="a86f8471-c31d-4fbc-a035-665d06047b03" Level="5" NonPagedMemory="false" />
@@ -326,7 +320,7 @@
         <Keyword Value="0x7fffffff" />
       </Keywords>
     </EventProvider>
-    <EventProvider Id="WPP/windows.devices.enumeration.dll" Name="1b42986f-288f-4dd7-b7f9-120297715c1e" Level="4" NonPagedMemory="false">
+    <EventProvider Id="WPP/windows.devices.enumeration.dll" Name="1b42986f-288f-4dd7-b7f9-120297715c1e" Level="5" NonPagedMemory="false">
       <Keywords>
         <Keyword Value="0xffffffff" />
       </Keywords>
@@ -408,7 +402,7 @@
         <Keyword Value="0x7fffffff" />
       </Keywords>
     </EventProvider>
-    <EventProvider Id="WPP/CompositorLogger" Name="75617473-6520-4B37-8FDF-D7D160972649" Level="4" NonPagedMemory="true">
+    <EventProvider Id="WPP/CompositorLogger" Name="75617473-6520-4B37-8FDF-D7D160972649" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7fffffff" />
       </Keywords>
@@ -499,22 +493,31 @@
       </Keywords>
     </EventProvider>
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.AudioClassExtension" Name="cb306fbc-d202-5666-f075-23a1ab91bea9" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.HdAudBus" Name="653880c0-4e64-56c1-5503-c1a609292702" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.PortClass" Name="bebd6159-6f76-5a22-366a-7753c2a63c3c" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.HdAudBus" Name="653880c0-4e64-56c1-5503-c1a609292702" Level="5" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.PortClass" Name="bebd6159-6f76-5a22-366a-7753c2a63c3c" Level="5" NonPagedMemory="true" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth" Name="d951cb3f-2cba-4a1c-9436-6cf2e904dde8" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth.BthA2dp" Name="8776AD1E-5022-4451-A566-F47E708B9075" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth.HfEnum" Name="9680893F-0696-4EC0-9AF5-65974897C9D4" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth.BthA2dp" Name="8776AD1E-5022-4451-A566-F47E708B9075" Level="5" NonPagedMemory="true" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth.HfEnum" Name="9680893F-0696-4EC0-9AF5-65974897C9D4" Level="5" NonPagedMemory="true" />
     <!-- Also Manifested/Microsoft-Windows-Kernel-Timer -->
     <EventProvider Id="TraceLogging/Microsoft.Windows.Kernel.Timer" Name="f2d06f08-592d-508c-c3aa-76f396fe18bd" Level="4" NonPagedMemory="true" />
     <EventProvider Id="Manifested/Microsoft-Windows-Bluetooth-Bthmini" Name="db25b328-a6f6-444f-9d97-a50e20217d16" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="Manifested/Microsoft-Windows-BTH-AudioClassDriver" Name="ddb6da39-08a7-4579-8d0c-68011146e205" Level="4" NonPagedMemory="true" />
+    <EventProvider Id="Manifested/Microsoft-Windows-BTH-AudioClassDriver" Name="ddb6da39-08a7-4579-8d0c-68011146e205" Level="5" NonPagedMemory="true" />
     <EventProvider Id="Manifested/Microsoft-Windows-BTH-BTHPORT" Name="8a1f9517-3a8c-4a9e-a018-4f17a200f277" Level="4" NonPagedMemory="true" />
     <!-- CodeIntegrity team says this shouldn't require nonpaged pool, but experiments suggest it does -->
     <EventProvider Id="Manifested/Microsoft-Windows-CodeIntegrity" Name="4ee76bd8-3cf4-44a0-a0ac-3937643e37a3" Level="4" NonPagedMemory="true" />
     <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Acpi" Name="C514638F-7723-485b-BCFC-96565D735D4A" Level="4" NonPagedMemory="true" />
     <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Pep" Name="5412704e-b2e1-4624-8ffd-55777b8f7373" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Power" Name="331c3b3a-2005-44c2-ac5e-77220c37d6b4" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Processor-Power" Name="0f67e49f-fe51-4e9f-b490-6f2948cc6027" Level="4" NonPagedMemory="true">
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Power" Name="331c3b3a-2005-44c2-ac5e-77220c37d6b4" Level="4" NonPagedMemory="true">
+      <EventFilters FilterIn="false">
+        <EventId Value="557" />
+        <EventId Value="63" />
+        <EventId Value="312" />
+        <EventId Value="111" />
+        <EventId Value="90" />
+        <EventId Value="504" />
+      </EventFilters>
+    </EventProvider>
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Processor-Power" Name="0f67e49f-fe51-4e9f-b490-6f2948cc6027" Level="3" NonPagedMemory="true">
       <CaptureStateOnSave>
         <Keyword Value="0x2" />
       </CaptureStateOnSave>
@@ -531,7 +534,7 @@
       </Keywords>
     </EventProvider>
     <EventProvider Id="Manifested/nvhda64vETW" Name="29A65B64-ED2D-491D-AFA0-97EB4373AD69" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="WPP/portcls.sys" Name="10eb6007-818c-4db6-a694-b518e589d07a" Level="4" NonPagedMemory="true">
+    <EventProvider Id="WPP/portcls.sys" Name="10eb6007-818c-4db6-a694-b518e589d07a" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
@@ -602,18 +605,18 @@
       </Keywords>
     </EventProvider>
     <!-- SoundWire -->
-    <EventProvider Id="WPP/SndwLogger" Name="CFF9D47E-C80F-4B80-B303-52CA51A8DB45" Level="4" NonPagedMemory="true">
+    <EventProvider Id="WPP/SndwLogger" Name="CFF9D47E-C80F-4B80-B303-52CA51A8DB45" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7fffffff" />
       </Keywords>
     </EventProvider>
     <EventProvider Id="TraceLogging/TelemetryAssert" Name="6D1B249D-131B-468A-899B-FB0AD9551772" Level="5" NonPagedMemory="true" />
-    <EventProvider Id="WPP/usbaudio.sys-bthhfenum.sys" Name="bf94d329-c5f9-4deb-ad29-2c6682d485f0" Level="4" NonPagedMemory="true">
+    <EventProvider Id="WPP/usbaudio.sys-bthhfenum.sys" Name="bf94d329-c5f9-4deb-ad29-2c6682d485f0" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
     </EventProvider>
-    <EventProvider Id="WPP/usbaudio2.sys" Name="641f2b2d-ea1d-4b67-9b3c-e7da318898ae" Level="4" NonPagedMemory="true">
+    <EventProvider Id="WPP/usbaudio2.sys" Name="641f2b2d-ea1d-4b67-9b3c-e7da318898ae" Level="5" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
@@ -628,7 +631,6 @@
             <EventProviderId Value="WMI/AEWMIGUID" />
             <EventProviderId Value="WPP/ApxGuid" />
             <EventProviderId Value="WPP/AudioTrace" />
-            <EventProviderId Value="WPP/bisrv.dll" />
             <EventProviderId Value="WPP/bluetoothapis.dll" />
             <EventProviderId Value="WPP/brokerlib.dll" />
             <EventProviderId Value="WPP/btagservice.dll" />
@@ -764,7 +766,6 @@
             <EventProviderId Value="Manifested/Microsoft-Windows-PDC" />
             <EventProviderId Value="Manifested/Microsoft-Windows-RTWorkQueue-Threading" />
             <EventProviderId Value="Manifested/Microsoft-Windows-Runtime-Media" />
-            <EventProviderId Value="Manifested/Microsoft-Windows-Shell-Core" />
             <EventProviderId Value="Manifested/Microsoft-Windows-Warp" />
             <EventProviderId Value="Manifested/Microsoft-Windows-WinHttp" />
             <EventProviderId Value="Manifested/Microsoft-Windows-WinRT-Error" />
