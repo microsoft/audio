@@ -32,11 +32,6 @@
         <Keyword Value="0x7FFFFFFF" />
       </Keywords>
     </EventProvider>
-    <EventProvider Id="WPP/bisrv.dll" Name="d2440861-bf3e-4f20-9fdc-e94e88dbe1f6" Level="4" NonPagedMemory="false">
-      <Keywords>
-        <Keyword Value="0x7fffffff" />
-      </Keywords>
-    </EventProvider>
     <EventProvider Id="WPP/bluetoothapis.dll" Name="c872ff32-5a0c-4736-bdf2-334c9b8d429f" Level="2" NonPagedMemory="false">
       <Keywords>
         <Keyword Value="0x7fffffff" />
@@ -187,7 +182,7 @@
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.Engine" Name="46df03df-beab-5f0b-7eb2-e471c1bea993" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.HrtfApo" Name="52000e1d-a0d3-55cd-dd29-631ed05d560e" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.InboxEffects" Name="54dc5472-46e8-5f6d-c555-54eab87bccbf" Level="5" NonPagedMemory="false" />
-    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.KernelStreamingEndpoint" Name="553ca39b-c608-566d-18ae-7b9a03a39acd" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.KernelStreamingEndpoint" Name="553ca39b-c608-566d-18ae-7b9a03a39acd" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.License" Name="030fa765-f1ae-448e-955b-44d76073e1dc" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.MatEncoder" Name="6d1f8b4f-1d23-4f48-89fb-fb76e1be10bd" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.MultimediaDevice" Name="a076f707-4472-5083-d14f-826d0ef75c78" Level="4" NonPagedMemory="false" />
@@ -284,7 +279,6 @@
     <EventProvider Id="Manifested/Microsoft-Windows-PDC" Name="a6bf0deb-3659-40ad-9f81-e25af62ce3c7" Level="4" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-RTWorkQueue-Threading" Name="e18d0fc9-9515-4232-98e4-89e456d8551b" Level="4" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-Runtime-Media" Name="8f0db3a8-299b-4d64-a4ed-907b409d4584" Level="4" NonPagedMemory="false" />
-    <EventProvider Id="Manifested/Microsoft-Windows-Shell-Core" Name="30336ed4-e327-447c-9de0-51b652c86108" Level="5" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-Warp" Name="ee685ec4-8270-4b08-9e4e-8b356f48f92f" Level="18" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-WinHttp" Name="7d44233d-3055-4b9c-ba64-0d47ca40a232" Level="5" NonPagedMemory="false" />
     <EventProvider Id="Manifested/Microsoft-Windows-WinRT-Error" Name="a86f8471-c31d-4fbc-a035-665d06047b03" Level="5" NonPagedMemory="false" />
@@ -513,8 +507,17 @@
     <EventProvider Id="Manifested/Microsoft-Windows-CodeIntegrity" Name="4ee76bd8-3cf4-44a0-a0ac-3937643e37a3" Level="4" NonPagedMemory="true" />
     <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Acpi" Name="C514638F-7723-485b-BCFC-96565D735D4A" Level="4" NonPagedMemory="true" />
     <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Pep" Name="5412704e-b2e1-4624-8ffd-55777b8f7373" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Power" Name="331c3b3a-2005-44c2-ac5e-77220c37d6b4" Level="4" NonPagedMemory="true" />
-    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Processor-Power" Name="0f67e49f-fe51-4e9f-b490-6f2948cc6027" Level="4" NonPagedMemory="true">
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Power" Name="331c3b3a-2005-44c2-ac5e-77220c37d6b4" Level="4" NonPagedMemory="true">
+      <EventFilters FilterIn="false">
+        <EventId Value="557" />
+        <EventId Value="63" />
+        <EventId Value="312" />
+        <EventId Value="111" />
+        <EventId Value="90" />
+        <EventId Value="504" />
+      </EventFilters>
+    </EventProvider>
+    <EventProvider Id="Manifested/Microsoft-Windows-Kernel-Processor-Power" Name="0f67e49f-fe51-4e9f-b490-6f2948cc6027" Level="3" NonPagedMemory="true">
       <CaptureStateOnSave>
         <Keyword Value="0x2" />
       </CaptureStateOnSave>
@@ -628,7 +631,6 @@
             <EventProviderId Value="WMI/AEWMIGUID" />
             <EventProviderId Value="WPP/ApxGuid" />
             <EventProviderId Value="WPP/AudioTrace" />
-            <EventProviderId Value="WPP/bisrv.dll" />
             <EventProviderId Value="WPP/bluetoothapis.dll" />
             <EventProviderId Value="WPP/brokerlib.dll" />
             <EventProviderId Value="WPP/btagservice.dll" />
@@ -764,7 +766,6 @@
             <EventProviderId Value="Manifested/Microsoft-Windows-PDC" />
             <EventProviderId Value="Manifested/Microsoft-Windows-RTWorkQueue-Threading" />
             <EventProviderId Value="Manifested/Microsoft-Windows-Runtime-Media" />
-            <EventProviderId Value="Manifested/Microsoft-Windows-Shell-Core" />
             <EventProviderId Value="Manifested/Microsoft-Windows-Warp" />
             <EventProviderId Value="Manifested/Microsoft-Windows-WinHttp" />
             <EventProviderId Value="Manifested/Microsoft-Windows-WinRT-Error" />
