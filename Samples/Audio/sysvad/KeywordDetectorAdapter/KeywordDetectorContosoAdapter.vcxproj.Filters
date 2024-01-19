@@ -34,17 +34,20 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+    <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="*.def;*.bat;*.hpj;*.asmx">
+    <None Include="packages.config" />
+    <None Include="KeywordDetectorContosoAdapter.def">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

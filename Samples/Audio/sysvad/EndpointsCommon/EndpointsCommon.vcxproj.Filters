@@ -144,7 +144,130 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+    <ClInclude Include="a2dphpminipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphpspeakertopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphpspeakertoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphpspeakerwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphptopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioModule0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioModule1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioModule2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioModuleHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpmictopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpmictoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpmicwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpmicwbwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpminipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpspeakertopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpspeakertoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpspeakerwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpspeakerwbwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfptopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray1toptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarraytopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarraywavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mintopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minwavert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minwavertstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NewDelete.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="simple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakerhptopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakerhptoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakerhpwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakertopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakertoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakerwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UsbHsDeviceFormats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsmictopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsmictoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsmicwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsminipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsspeakertopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsspeakertoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsspeakerwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhstopo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
@@ -271,10 +394,142 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A2dpHpDeviceFormats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphpminipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphpspeakertopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphpspeakertoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphpspeakerwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="a2dphptopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioModule0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioModule1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioModule2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioModuleHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpmictopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpmictoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpmicwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpmicwbwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpminipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpspeakertopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpspeakertoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpspeakerwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfpspeakerwbwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bthhfptopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray1toptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarraytopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarraywavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mintopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minwavert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minwavertstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NewDelete.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="simple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakerhptopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakerhptoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakerhpwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakertopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakertoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakerwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UsbHsDeviceFormats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsmictopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsmictoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsmicwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsminipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsspeakertopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsspeakertoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhsspeakerwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usbhstopo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

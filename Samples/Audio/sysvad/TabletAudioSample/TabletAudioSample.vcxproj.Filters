@@ -98,7 +98,82 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+    <ClInclude Include="hdmitoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdmiwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray2toptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray2wavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray3toptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray3wavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micintopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micintoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micinwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdiftopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdiftoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdifwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdmitoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdmiwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray2toptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray2wavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray3toptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray3wavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micintopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micintoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micinwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdiftopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdiftoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdifwavtable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
@@ -137,22 +212,64 @@
     <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+    <ClInclude Include="hdmitopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdmitoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdmiwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray2toptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray2wavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray3toptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micarray3wavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micintopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micintoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micinwavtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minipairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdiftopo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdiftoptable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spdifwavtable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Inf Include="*.inx">
+    <Inf Include="ComponentizedAudioSample.inx">
       <Filter>Driver Files</Filter>
     </Inf>
-    <Inf Include="*.inx">
+    <Inf Include="ComponentizedAudioSampleExtension.inx">
       <Filter>Driver Files</Filter>
     </Inf>
-    <Inf Include="*.inx">
+    <Inf Include="ComponentizedApoSample.inx">
       <Filter>Driver Files</Filter>
     </Inf>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

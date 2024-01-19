@@ -5,17 +5,9 @@
       <Configuration>Debug</Configuration>
       <Platform>ARM64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|ARM64">
       <Configuration>Release</Configuration>
       <Platform>ARM64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
@@ -68,22 +60,6 @@
     <PlatformToolset>WindowsApplicationForDrivers10.0</PlatformToolset>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
   </PropertyGroup>
-  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetVersion>Windows10</TargetVersion>
-    <UseDebugLibraries>False</UseDebugLibraries>
-    <DriverTargetPlatform>Windows Driver</DriverTargetPlatform>
-    <DriverType />
-    <PlatformToolset>WindowsApplicationForDrivers10.0</PlatformToolset>
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-  </PropertyGroup>
-  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetVersion>Windows10</TargetVersion>
-    <UseDebugLibraries>True</UseDebugLibraries>
-    <DriverTargetPlatform>Windows Driver</DriverTargetPlatform>
-    <DriverType />
-    <PlatformToolset>WindowsApplicationForDrivers10.0</PlatformToolset>
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <PropertyGroup>
     <OutDir>$(IntDir)</OutDir>
@@ -100,12 +76,6 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
-  </ImportGroup>
   <ItemGroup Label="WrappedTaskItems" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>KeywordDetectorContosoAdapter</TargetName>
@@ -119,45 +89,23 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <TargetName>KeywordDetectorContosoAdapter</TargetName>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>KeywordDetectorContosoAdapter</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>KeywordDetectorContosoAdapter</TargetName>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Link>
-      <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
       <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <Link>
-      <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
       <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
-      <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
       <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <Link>
-      <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
-      <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Link>
-      <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
-      <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Link>
-      <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
       <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
@@ -168,13 +116,16 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;.;..\;$(IntDir)</AdditionalIncludeDirectories>
       <ExceptionHandling>
       </ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
     </Midl>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
@@ -192,13 +143,16 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;.;..\;$(IntDir)</AdditionalIncludeDirectories>
       <ExceptionHandling>
       </ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
     </Midl>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
@@ -216,13 +170,16 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;.;..\;$(IntDir)</AdditionalIncludeDirectories>
       <ExceptionHandling>
       </ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
     </Midl>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
@@ -240,61 +197,16 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;.;..\;$(IntDir)</AdditionalIncludeDirectories>
       <ExceptionHandling>
       </ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
-    </Midl>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>%(AdditionalDependencies);Kernel32.lib;ole32.lib;oleaut32.lib;advapi32.lib;user32.lib;uuid.lib;mfplat.lib;runtimeobject.lib</AdditionalDependencies>
-      <ModuleDefinitionFile>KeywordDetectorContosoAdapter.def</ModuleDefinitionFile>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <RuntimeLibrary Condition="'$(UseDebugLibraries)'=='false'">MultiThreaded</RuntimeLibrary>
-      <RuntimeLibrary Condition="'$(UseDebugLibraries)'=='true'">MultiThreadedDebug</RuntimeLibrary>
-      <TreatWarningAsError>true</TreatWarningAsError>
-      <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
-      <ExceptionHandling>
-      </ExceptionHandling>
-    </ClCompile>
-    <Midl>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
-    </Midl>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>%(AdditionalDependencies);Kernel32.lib;ole32.lib;oleaut32.lib;advapi32.lib;user32.lib;uuid.lib;mfplat.lib;runtimeobject.lib</AdditionalDependencies>
-      <ModuleDefinitionFile>KeywordDetectorContosoAdapter.def</ModuleDefinitionFile>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <RuntimeLibrary Condition="'$(UseDebugLibraries)'=='false'">MultiThreaded</RuntimeLibrary>
-      <RuntimeLibrary Condition="'$(UseDebugLibraries)'=='true'">MultiThreadedDebug</RuntimeLibrary>
-      <TreatWarningAsError>true</TreatWarningAsError>
-      <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
-      <ExceptionHandling>
-      </ExceptionHandling>
-    </ClCompile>
-    <Midl>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\</AdditionalIncludeDirectories>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
     </Midl>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
@@ -319,11 +231,12 @@
   <ItemGroup>
     <None Exclude="@(None)" Include="*.txt;*.htm;*.html" />
     <None Exclude="@(None)" Include="*.ico;*.cur;*.bmp;*.dlg;*.rct;*.gif;*.jpg;*.jpeg;*.wav;*.jpe;*.tiff;*.tif;*.png;*.rc2" />
-    <None Exclude="@(None)" Include="*.def;*.bat;*.hpj;*.asmx" />
     <None Include="packages.config" />
+    <None Include="KeywordDetectorContosoAdapter.def" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Exclude="@(ClInclude)" Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="..\packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets" Condition="Exists('..\packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets')" />

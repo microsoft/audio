@@ -727,7 +727,6 @@ CAecApoMFX::AcceptInput(DWORD dwInputId,
     ATLASSERT(m_bIsLocked);
 
     ATLASSERT(pInputConnection->u32Signature == APO_CONNECTION_PROPERTY_V2_SIGNATURE);
-    ATLASSERT(inputId == m_auxiliaryInputId);
     UNREFERENCED_PARAMETER(dwInputId);
 
     const APO_CONNECTION_PROPERTY_V2* connectionV2 = reinterpret_cast<const APO_CONNECTION_PROPERTY_V2*>(pInputConnection);

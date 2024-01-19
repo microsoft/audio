@@ -27,10 +27,10 @@
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+    <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+    <ClInclude Include="KWSApo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,19 +38,7 @@
     <None Include="KWSApo.png">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="KWSApoDll.cpp">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="KWSApoMfx.cpp">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="KWSApoDll.def">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="*.ico;*.cur;*.bmp;*.dlg;*.rct;*.gif;*.jpg;*.jpeg;*.wav;*.jpe;*.tiff;*.tif;*.png;*.rc2">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="*.def;*.bat;*.hpj;*.asmx">
       <Filter>Source Files</Filter>
     </None>
     <None Include="packages.config" />
@@ -70,5 +58,8 @@
     <ResourceCompile Include="KWSApoDll.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

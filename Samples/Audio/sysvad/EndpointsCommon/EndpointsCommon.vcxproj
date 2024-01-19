@@ -5,17 +5,9 @@
       <Configuration>Debug</Configuration>
       <Platform>ARM64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|ARM64">
       <Configuration>Release</Configuration>
       <Platform>ARM64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
@@ -67,22 +59,6 @@
     <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
     <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
-  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetVersion>Windows10</TargetVersion>
-    <UseDebugLibraries>False</UseDebugLibraries>
-    <DriverTargetPlatform>Windows Driver</DriverTargetPlatform>
-    <DriverType>KMDF</DriverType>
-    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-  </PropertyGroup>
-  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetVersion>Windows10</TargetVersion>
-    <UseDebugLibraries>True</UseDebugLibraries>
-    <DriverTargetPlatform>Windows Driver</DriverTargetPlatform>
-    <DriverType>KMDF</DriverType>
-    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <PropertyGroup>
     <OutDir>$(IntDir)</OutDir>
@@ -99,12 +75,6 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
-  </ImportGroup>
   <ItemGroup Label="WrappedTaskItems" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>EndpointsCommon</TargetName>
@@ -118,12 +88,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <TargetName>EndpointsCommon</TargetName>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>EndpointsCommon</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>EndpointsCommon</TargetName>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ResourceCompile>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
@@ -135,6 +99,7 @@
       <ExceptionHandling>
       </ExceptionHandling>
       <DisableSpecificWarnings>4595;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
@@ -155,6 +120,7 @@
       <ExceptionHandling>
       </ExceptionHandling>
       <DisableSpecificWarnings>4595;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
@@ -175,6 +141,7 @@
       <ExceptionHandling>
       </ExceptionHandling>
       <DisableSpecificWarnings>4595;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
@@ -195,46 +162,7 @@
       <ExceptionHandling>
       </ExceptionHandling>
       <DisableSpecificWarnings>4595;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-    </ClCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_USE_WAVERT_;SYSVAD_BTH_BYPASS;SYSVAD_USB_SIDEBAND</PreprocessorDefinitions>
-    </Midl>
-    <DriverSign>
-      <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
-    </DriverSign>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ResourceCompile>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_USE_WAVERT_;SYSVAD_BTH_BYPASS;SYSVAD_USB_SIDEBAND</PreprocessorDefinitions>
-    </ResourceCompile>
-    <ClCompile>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..;.</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_USE_WAVERT_;SYSVAD_BTH_BYPASS;SYSVAD_USB_SIDEBAND;_NEW_DELETE_OPERATORS_</PreprocessorDefinitions>
-      <ExceptionHandling>
-      </ExceptionHandling>
-      <DisableSpecificWarnings>4595;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-    </ClCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_USE_WAVERT_;SYSVAD_BTH_BYPASS;SYSVAD_USB_SIDEBAND</PreprocessorDefinitions>
-    </Midl>
-    <DriverSign>
-      <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
-    </DriverSign>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ResourceCompile>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_USE_WAVERT_;SYSVAD_BTH_BYPASS;SYSVAD_USB_SIDEBAND</PreprocessorDefinitions>
-    </ResourceCompile>
-    <ClCompile>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..;.</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_USE_WAVERT_;SYSVAD_BTH_BYPASS;SYSVAD_USB_SIDEBAND;_NEW_DELETE_OPERATORS_</PreprocessorDefinitions>
-      <ExceptionHandling>
-      </ExceptionHandling>
-      <DisableSpecificWarnings>4595;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..</AdditionalIncludeDirectories>
@@ -278,7 +206,49 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Exclude="@(ClInclude)" Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd" />
+    <ClInclude Include="A2dpHpDeviceFormats.h" />
+    <ClInclude Include="a2dphpminipairs.h" />
+    <ClInclude Include="a2dphpspeakertopo.h" />
+    <ClInclude Include="a2dphpspeakertoptable.h" />
+    <ClInclude Include="a2dphpspeakerwavtable.h" />
+    <ClInclude Include="a2dphptopo.h" />
+    <ClInclude Include="AudioModule0.h" />
+    <ClInclude Include="AudioModule1.h" />
+    <ClInclude Include="AudioModule2.h" />
+    <ClInclude Include="AudioModuleHelper.h" />
+    <ClInclude Include="bthhfpmictopo.h" />
+    <ClInclude Include="bthhfpmictoptable.h" />
+    <ClInclude Include="bthhfpmicwavtable.h" />
+    <ClInclude Include="bthhfpmicwbwavtable.h" />
+    <ClInclude Include="bthhfpminipairs.h" />
+    <ClInclude Include="bthhfpspeakertopo.h" />
+    <ClInclude Include="bthhfpspeakertoptable.h" />
+    <ClInclude Include="bthhfpspeakerwavtable.h" />
+    <ClInclude Include="bthhfpspeakerwbwavtable.h" />
+    <ClInclude Include="bthhfptopo.h" />
+    <ClInclude Include="micarray1toptable.h" />
+    <ClInclude Include="micarraytopo.h" />
+    <ClInclude Include="micarraywavtable.h" />
+    <ClInclude Include="mintopo.h" />
+    <ClInclude Include="minwavert.h" />
+    <ClInclude Include="minwavertstream.h" />
+    <ClInclude Include="NewDelete.h" />
+    <ClInclude Include="simple.h" />
+    <ClInclude Include="speakerhptopo.h" />
+    <ClInclude Include="speakerhptoptable.h" />
+    <ClInclude Include="speakerhpwavtable.h" />
+    <ClInclude Include="speakertopo.h" />
+    <ClInclude Include="speakertoptable.h" />
+    <ClInclude Include="speakerwavtable.h" />
+    <ClInclude Include="UsbHsDeviceFormats.h" />
+    <ClInclude Include="usbhsmictopo.h" />
+    <ClInclude Include="usbhsmictoptable.h" />
+    <ClInclude Include="usbhsmicwavtable.h" />
+    <ClInclude Include="usbhsminipairs.h" />
+    <ClInclude Include="usbhsspeakertopo.h" />
+    <ClInclude Include="usbhsspeakertoptable.h" />
+    <ClInclude Include="usbhsspeakerwavtable.h" />
+    <ClInclude Include="usbhstopo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="..\packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets" Condition="Exists('..\packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets')" />
