@@ -257,6 +257,7 @@
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VirtualSurroundApo" Name="166d2c82-4c89-53aa-a9ee-d558d0ce0362" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager" Name="b8efdc71-988b-50be-86bb-0f97b0a3a7c8" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager2" Name="6fc36b25-61ac-5e62-b785-94b344e0702b" Level="5" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.VoiceClarity" Name="cc0102c0-8657-576a-12e9-050ea4646b05" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.8" Name="35b65f6b-fb4e-57d6-2927-7c63ad03dbcb" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.81" Name="8f8942e2-66b4-5650-8cf1-de723ca48565" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.9" Name="c34eefdb-d72f-5786-6247-78a1e39be7fa" Level="5" NonPagedMemory="false" />
@@ -885,6 +886,7 @@
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.VirtualSurroundApo" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.VoiceActivationManager2" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.VoiceClarity" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.8" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.81" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.9" />
