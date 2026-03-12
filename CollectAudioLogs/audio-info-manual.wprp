@@ -213,6 +213,7 @@
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.8" Name="35b65f6b-fb4e-57d6-2927-7c63ad03dbcb" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.81" Name="8f8942e2-66b4-5650-8cf1-de723ca48565" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Audio.XAudio.2.9" Name="c34eefdb-d72f-5786-6247-78a1e39be7fa" Level="4" NonPagedMemory="false" />
+    <EventProvider Id="TraceLogging/Microsoft.Windows.Bluetooth.LE.Audio.Services" Name="bb867b81-15fa-4578-95b6-39e3a45f5de3" Level="5" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Capture.MFCaptureEngine" Name="c715453b-5d50-4ed1-8304-2ffca01cbd00" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Capture.Photography" Name="2aa2b8df-8a4e-52a7-8cc7-c72f28293393" Level="4" NonPagedMemory="false" />
     <EventProvider Id="TraceLogging/Microsoft.Windows.Containers.Manager" Name="9D911DDB-D45F-41C3-B766-D566D2655C4A" Level="4" NonPagedMemory="false" />
@@ -701,6 +702,7 @@
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.8" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.81" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Audio.XAudio.2.9" />
+            <EventProviderId Value="TraceLogging/Microsoft.Windows.Bluetooth.LE.Audio.Services" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Capture.MFCaptureEngine" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Capture.Photography" />
             <EventProviderId Value="TraceLogging/Microsoft.Windows.Containers.Manager" />
