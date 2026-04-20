@@ -423,6 +423,11 @@
         <Keyword Value="0x7fffffff" />
       </Keywords>
     </EventProvider>
+    <EventProvider Id="WPP/IntcSBTLE" Name="9954BBEE-3246-4F17-AE88-50D02FFA1A8E" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
     <EventProvider Id="WPP/intcdaud.sys" Name="8419744c-2c42-4524-9a9e-400abdd7452b" Level="9" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0xFFFFFFFF" />
@@ -434,6 +439,16 @@
       </Keywords>
     </EventProvider>
     <EventProvider Id="WPP/Intel-DetectionVerificationDrv" Name="944e9848-1ff2-47b3-a768-f0abb159bddf" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcUSB" Name="CD7222BF-A0FB-424A-8B36-88C9F40D58A4" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcSUSB" Name="AE39A9C7-691C-4854-87F5-F12AC01C36F9" Level="9" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0xFFFFFFFF" />
       </Keywords>
@@ -469,6 +484,26 @@
       </Keywords>
     </EventProvider>
     <EventProvider Id="WPP/Intel-IntcSNDW" Name="88af8A3f-7433-4bf9-a11f-c1b6fe787f0a" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcSDWBus" Name="F3205EE1-D87A-471C-A06C-9073A7BA6F4F" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcStreaming" Name="CDB67DAC-8621-4E28-97A9-9C6EAFAA4A64" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-IntcSSNDW" Name="DFFFDB7A-C345-425B-9DD8-5802CB0AC1BF" Level="9" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WPP/Intel-GNA" Name="905E9841-7270-48B6-9210-0104A52CD07F" Level="9" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0xFFFFFFFF" />
       </Keywords>
@@ -805,9 +840,12 @@
             <EventProviderId Value="WPP/hdaudio.sys-hdaudbus.sys" />
             <EventProviderId Value="WPP/hidbth.sys" />
             <EventProviderId Value="WPP/IntcBTle" />
+            <EventProviderId Value="WPP/IntcSBTLE" />
             <EventProviderId Value="WPP/intcdaud.sys" />
             <EventProviderId Value="WPP/Intel-Cherrytrail-Audio-255EA6F4" />
             <EventProviderId Value="WPP/Intel-DetectionVerificationDrv" />
+            <EventProviderId Value="WPP/Intel-IntcUSB" />
+            <EventProviderId Value="WPP/Intel-IntcSUSB" />
             <EventProviderId Value="WPP/Intel-Haswell-Audio-73E110CB" />
             <EventProviderId Value="WPP/Intel-Haswell-Audio-ABFCC127" />
             <EventProviderId Value="WPP/Intel-IntcAudioBus" />
@@ -815,6 +853,10 @@
             <EventProviderId Value="WPP/Intel-IntcDMic" />
             <EventProviderId Value="WPP/Intel-IntcOED" />
             <EventProviderId Value="WPP/Intel-IntcSNDW" />
+            <EventProviderId Value="WPP/Intel-IntcSDWBus" />
+            <EventProviderId Value="WPP/Intel-IntcStreaming" />
+            <EventProviderId Value="WPP/Intel-IntcSSNDW" />
+            <EventProviderId Value="WPP/Intel-GNA" />
             <EventProviderId Value="WPP/Intel-IntcSST" />
             <EventProviderId Value="WPP/Intel-RefCodec" />
             <EventProviderId Value="WPP/KmdfTraceGuid-kernel" />
