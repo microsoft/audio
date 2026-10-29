@@ -495,6 +495,11 @@
         <Keyword Value="0x7fffffff" />
       </Keywords>
     </EventProvider>
+    <EventProvider Id="WPP/bthleaudioacx.sys" Name="2f6a9d3e-8c41-4e5a-9b21-6a7d5c4e10af" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
     <EventProvider Id="WPP/bthmini.sys" Name="f0cb5d88-0c28-475a-8ae9-d3331ed861de" Level="4" NonPagedMemory="true">
       <Keywords>
         <Keyword Value="0x7fffffff" />
@@ -1039,6 +1044,7 @@
             <EventProviderId Value="WPP/bthenum.sys" />
             <EventProviderId Value="WPP/bthhfaud.sys" />
             <EventProviderId Value="WPP/bthl2cap.sys" />
+            <EventProviderId Value="WPP/bthleaudioacx.sys" />
             <EventProviderId Value="WPP/bthmini.sys" />
             <EventProviderId Value="WPP/bthmodem.sys" />
             <EventProviderId Value="WPP/bthport.sys" />
